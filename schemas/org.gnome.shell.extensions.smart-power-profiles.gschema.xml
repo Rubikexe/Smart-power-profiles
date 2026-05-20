@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.smart-power-profiles"
+          path="/org/gnome/shell/extensions/smart-power-profiles/">
+    <key name="enable-boot-boost" type="b">
+      <default>true</default>
+      <summary>Enable boot boost automation</summary>
+      <description>Whether to apply startup and delayed power profiles automatically.</description>
+    </key>
+    <key name="startup-profile" type="s">
+      <default>'performance'</default>
+      <summary>Startup power profile</summary>
+      <description>The power profile applied when the extension is enabled.</description>
+    </key>
+    <key name="enable-delayed-profile" type="b">
+      <default>true</default>
+      <summary>Enable delayed profile</summary>
+      <description>Whether to apply another power profile after the configured delay.</description>
+    </key>
+    <key name="delayed-profile" type="s">
+      <default>'powersave'</default>
+      <summary>Delayed power profile</summary>
+      <description>The power profile applied after the configured delay.</description>
+    </key>
+    <key name="delay-seconds" type="u">
+      <default>30</default>
+      <summary>Delay before switching profile</summary>
+      <description>The number of seconds before switching to the delayed power profile.</description>
+    </key>
+    <key name="enable-process-rules" type="b">
+      <default>false</default>
+      <summary>Enable automatic power mode switching</summary>
+      <description>Whether selected running processes should apply their configured power modes.</description>
+    </key>
+    <key name="process-scan-interval" type="u">
+      <default>15</default>
+      <range min="5" max="60"/>
+      <summary>Process scan interval</summary>
+      <description>Seconds between full scans for matching running processes.</description>
+    </key>
+    <key name="process-rules" type="as">
+      <default>[]</default>
+      <summary>Automatic power mode switching rules</summary>
+      <description>Serialized per-process automation rules.</description>
+    </key>
+    <key name="show-indicator" type="b">
+      <default>true</default>
+      <summary>Show panel indicator</summary>
+      <description>Whether to show the panel indicator for the current profile.</description>
+    </key>
+    <key name="colorize-indicator" type="b">
+      <default>false</default>
+      <summary>Colorize panel indicator</summary>
+      <description>Whether to colorize the panel indicator according to the current profile.</description>
+    </key>
+    <key name="show-profile-label" type="b">
+      <default>false</default>
+      <summary>Show profile label</summary>
+      <description>Whether to show the current profile name next to the panel indicator.</description>
+    </key>
+    <key name="sync-active-profile" type="b">
+      <default>false</default>
+      <summary>Sync active profile</summary>
+      <description>Whether to periodically read the active system profile so the indicator stays in sync with external changes. This may cause stuttering on some systems.</description>
+    </key>
+    <key name="sync-active-profile-pause-on-fullscreen" type="b">
+      <default>true</default>
+      <summary>Pause sync in fullscreen</summary>
+      <description>Whether to skip active profile synchronization while fullscreen or borderless windows are active.</description>
+    </key>
+    <key name="indicator-order" type="u">
+      <default>1</default>
+      <range min="0" max="16"/>
+      <summary>Profile indicator order</summary>
+      <description>The order of the profile indicator within its panel section.</description>
+    </key>
+    <key name="show-cpu-metrics" type="b">
+      <default>false</default>
+      <summary>Show CPU info</summary>
+      <description>Whether to show CPU temperature and frequency in the panel.</description>
+    </key>
+    <key name="metrics-mode" type="s">
+      <default>'both'</default>
+      <summary>CPU info mode</summary>
+      <description>Which CPU info should be shown in the panel.</description>
+    </key>
+    <key name="metrics-position" type="s">
+      <default>'left'</default>
+      <summary>CPU info panel position</summary>
+      <description>Which panel box should contain the CPU info indicator.</description>
+    </key>
+    <key name="metrics-margin" type="u">
+      <default>0</default>
+      <summary>CPU info horizontal margin</summary>
+      <description>The horizontal margin around the CPU info indicator in pixels.</description>
+    </key>
+    <key name="metrics-order" type="u">
+      <default>1</default>
+      <range min="0" max="16"/>
+      <summary>CPU info order</summary>
+      <description>The order of the CPU info indicator within its panel section.</description>
+    </key>
+  </schema>
+</schemalist>

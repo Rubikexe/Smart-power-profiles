@@ -1,0 +1,12 @@
+{
+  "uuid": "smart-power-profiles@rubik",
+  "name": "Smart Power Profiles",
+  "description": "Automatically manages power profiles at session start and when selected processes start or stop.",
+  "url": "https://github.com/",
+  "version": 1,
+  "gettext-domain": "smart-power-profiles@rubik",
+  "shell-version": [
+    "50"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.smart-power-profiles"
+}
